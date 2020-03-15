@@ -11,32 +11,32 @@ public class Bullet : MonoBehaviour
     public float autodestruction;
 
 
+
+
     void Awake()
     {
+
         rigidbody = GetComponent<Rigidbody2D>();
         Destroy(this.gameObject, autodestruction);
-
+       
     }
 
-    public void ChangeDirection()
+    private void Start()
     {
-
+        rigidbody.rotation = -90;
     }
-    
 
-    // Update is called once per frame
+
+
+
     void Update()
     {
+        
         //rigidbody.velocity = new Vector2(0,12*dir);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       /* if (collision.gameObject.tag == "Enemy")
-        {
-            collision.gameObject.GetComponent<Enemy>().Damage();
-            Destroy(this.gameObject);
-
-        }*/
+   
     }
 }

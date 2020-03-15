@@ -29,7 +29,7 @@ public class EnemyBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("MotherCell"))
+        if (collision.CompareTag("MotherCell") || collision.CompareTag("Player"))
         {
             Object.Destroy(this.gameObject);
         }
