@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d3afcfc3a018ff4cb971878c76b7afa, type: 3}
+  m_Name: Spawn3
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 3370357088951999023, guid: 1e1716adeb98c4c4d94dd2ef786ceb4c,
+    type: 3}
+  pathPrefab: {fileID: 1976784532410610118, guid: e06337e8580d3864d8784b7ab3f565f7,
+    type: 3}
+  motherCellTrans: {fileID: 1971672161684045505, guid: dbf8bb17bed84b3468075995becf0d6d,
+    type: 3}
+  timeBetweenSpawns: 0.5
+  spawnRandomFactor: 0.3
+  moveSpeed: 2
