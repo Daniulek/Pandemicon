@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnConfig: {fileID: 11400000, guid: 869a261e6ac4e3747a37b395c909b656, type: 2}
-  moveSpeed: 3
+  moveSpeed: 2
 --- !u!114 &5838786878898645116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,12 +159,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31491acfca3d5d14588f5122a68e4711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  scoreValue: 50
+  health: 15
   fireRate: 0
   projectileSpeed: 5
+  moveSpeed: 0.1
   spawnConfig: {fileID: 0}
   targetPosition: {fileID: 0}
-  moveSpeed: 0.1
   canShoot: 0
   rigidbody2D: {fileID: 0}
 --- !u!114 &-3787992001198281841
@@ -179,4 +180,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c7361cc76005744b7db25a1c0663a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 20

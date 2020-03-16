@@ -5,21 +5,21 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-
+    [Header("Enemy Stats")]
+    [SerializeField] int scoreValue = 150;
     [SerializeField] float health = 100;
     [SerializeField] float fireRate;
     [SerializeField] float projectileSpeed = 5;
-    [SerializeField] SpawnConfig spawnConfig;
-    
-    GameObject projectile;
-    public Transform targetPosition;
-    Vector2 direction;
-
     public float moveSpeed = 0.1f;
+
+    [SerializeField] SpawnConfig spawnConfig;
+
+    [Header("Shooting")]
+    GameObject projectile;
+    Vector2 direction;
+    public Transform targetPosition;
     public bool canShoot = false;
     private float angle;
-
-
     public Rigidbody2D rigidbody2D;
 
 
@@ -84,6 +84,7 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        FindObjectOfType<GameSession>().AddToScore(scoreValue);
         Destroy(gameObject);
     }
 }

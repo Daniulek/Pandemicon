@@ -145,12 +145,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31491acfca3d5d14588f5122a68e4711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  scoreValue: 10
+  health: 5
   fireRate: 1
   projectileSpeed: 5
+  moveSpeed: 1
   spawnConfig: {fileID: 11400000, guid: 7c0db91e04678f745a1d5ce16815effa, type: 2}
   targetPosition: {fileID: 0}
-  moveSpeed: 1
   canShoot: 1
   rigidbody2D: {fileID: 0}
 --- !u!114 &-3973045748970356472

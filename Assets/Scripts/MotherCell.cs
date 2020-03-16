@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class MotherCell : MonoBehaviour
 {
+    float hurtTime = 0.0f;
+    float hurtRate = 2f;
+
 
     [SerializeField] int health=150;
-    SceneLoader sceneLoader;
+    //SceneLoader sceneLoader;
 
     // Start is called before the first frame update
     void Awake()
     {
+
 
     }
 
@@ -35,16 +39,33 @@ public class MotherCell : MonoBehaviour
 
         if (health <= 0)
         {
-            sceneLoader = new SceneLoader();
-            sceneLoader.LoadGameOver();
+            FindObjectOfType<SceneLoader>().LoadGameOver();
+            //sceneLoader = new SceneLoader();
+            //sceneLoader.LoadGameOver();
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if(collision.gameObject.tag == "Bacteriophage")
+    //    {
+    //        health -= 1;
+
+    //    }
+    //}
+
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Bacteriophage")
+        if (collision.gameObject.tag == "Bacteriophage")
         {
-            health -= 10;
+
+
+            if (Time.time > hurtTime)
+            {
+                hurtTime = Time.time + hurtRate;
+                health -= 1;
+            }
+
 
         }
     }

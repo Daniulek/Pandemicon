@@ -16,7 +16,7 @@ public class EnemyPathing : MonoBehaviour
     void Start()
     {
         waypoints = spawnConfig.GetWaypoints();
-        transform.position = waypoints[Random.Range(0,waypoints.Count)].transform.position;
+        transform.position = waypoints[Random.Range(0,waypoints.Count-1)].transform.position;
         rigidbody2D = this.GetComponent<Rigidbody2D>();
 
 
