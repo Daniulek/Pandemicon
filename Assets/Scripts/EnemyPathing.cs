@@ -27,7 +27,7 @@ public class EnemyPathing : MonoBehaviour
     {
         Transform motherCell = spawnConfig.GetMotherCellTrans();
         Vector3 direction = motherCell.position - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 180;
         rigidbody2D.rotation = angle;
         direction.Normalize();
 

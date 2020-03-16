@@ -6,9 +6,11 @@ public class Bullet : MonoBehaviour
 {
 
     Rigidbody2D rigidbody;
+    Transform motherCell;
     int dir = 1;
     public float myTransformZ;
     public float autodestruction;
+
 
 
 
@@ -23,7 +25,8 @@ public class Bullet : MonoBehaviour
 
     private void Start()
     {
-        rigidbody.rotation = -90;
+        motherCell = GameObject.FindGameObjectWithTag("MotherCell").GetComponent<Transform>();
+        ChangeDirection();
     }
 
 
@@ -31,8 +34,15 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        
-        //rigidbody.velocity = new Vector2(0,12*dir);
+        ChangeDirection();
+    }
+
+    private void ChangeDirection()
+    {
+        Vector3 direction = motherCell.position - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        rigidbody.rotation = angle;
+        direction.Normalize();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
