@@ -38,7 +38,7 @@ public class Bullet : MonoBehaviour
     private void ChangeDirection()
     {
         Vector3 direction = motherCell.position - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 180;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90;
         rigidbody.rotation = angle;
         direction.Normalize();
     }

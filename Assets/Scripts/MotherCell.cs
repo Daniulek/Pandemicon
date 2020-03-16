@@ -6,6 +6,8 @@ public class MotherCell : MonoBehaviour
 {
     float hurtTime = 0.0f;
     float hurtRate = 2f;
+    float bonusTime = 60f;
+    int multiplier = 1;
 
 
     [SerializeField] int health=150;
@@ -21,7 +23,7 @@ public class MotherCell : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        AddingHP();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -43,6 +45,22 @@ public class MotherCell : MonoBehaviour
             //sceneLoader = new SceneLoader();
             //sceneLoader.LoadGameOver();
         }
+    }
+
+    private void AddingHP() // HP ACHIEVMENT
+    {
+        
+
+        if (Time.time > bonusTime)
+        {
+            
+            health += 25 * multiplier;
+            bonusTime += 60f;
+            Debug.Log(25 * multiplier + " : " + health);
+            multiplier += 1;
+            
+        }
+
     }
 
     //private void OnCollisionEnter2D(Collision2D collision)
