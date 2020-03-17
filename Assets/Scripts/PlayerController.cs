@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveDir;
     public float moveSpeed = 15;
     private Rigidbody2D rigidBody2D;
-    public float bulletForce = 20f;
+
 
     public Animator animator;
 

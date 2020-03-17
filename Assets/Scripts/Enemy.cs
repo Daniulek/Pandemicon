@@ -69,6 +69,7 @@ public class Enemy : MonoBehaviour
         {
             DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
             ProcessHit(damageDealer);
+
         }
         else
         {

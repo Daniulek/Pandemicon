@@ -9,22 +9,24 @@ public class MotherCell : MonoBehaviour
     float bonusTime = 60f;
     float elapsedTime;
     int multiplier = 1;
+    private Animator animator;
 
 
 
     [SerializeField] int health=150;
-    //SceneLoader sceneLoader;
+    
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-
+        animator = GetComponent<Animator>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        animator.SetInteger("Health", health);
         elapsedTime = Time.timeSinceLevelLoad;
         AddingHP();
     }
