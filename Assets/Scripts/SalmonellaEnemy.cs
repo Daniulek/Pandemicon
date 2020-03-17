@@ -38,4 +38,12 @@ public class SalmonellaEnemy : Enemy
 
         transform.position = new Vector2(transform.position.x + (movementPerSecond.x * Time.deltaTime), transform.position.y + (movementPerSecond.y * Time.deltaTime));
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "MotherCell" || collision.gameObject.tag == "Player")
+        {
+            Die();
+        }
+    }
 }

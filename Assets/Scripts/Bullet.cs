@@ -13,8 +13,6 @@ public class Bullet : MonoBehaviour
 
 
 
-
-
     void Awake()
     {
 
@@ -45,6 +43,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-   
+        Destroy(gameObject);
+
     }
 }

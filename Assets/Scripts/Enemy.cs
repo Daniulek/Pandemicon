@@ -65,11 +65,15 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
-
-        ProcessHit(damageDealer);
-
+        if (collision.gameObject.tag != "Borders")
+        {
+            DamageDealer damageDealer = collision.gameObject.GetComponent<DamageDealer>();
+            ProcessHit(damageDealer);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void ProcessHit(DamageDealer damageDealer)
@@ -82,7 +86,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void Die()
+    public void Die()
     {
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
         Destroy(gameObject);

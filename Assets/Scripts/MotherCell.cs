@@ -7,7 +7,9 @@ public class MotherCell : MonoBehaviour
     float hurtTime = 0.0f;
     float hurtRate = 2f;
     float bonusTime = 60f;
+    float elapsedTime;
     int multiplier = 1;
+
 
 
     [SerializeField] int health=150;
@@ -23,6 +25,7 @@ public class MotherCell : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        elapsedTime = Time.timeSinceLevelLoad;
         AddingHP();
     }
 
@@ -41,9 +44,13 @@ public class MotherCell : MonoBehaviour
 
         if (health <= 0)
         {
+            foreach(GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
+            {
+                Destroy(enemy);
+            }
+
             FindObjectOfType<SceneLoader>().LoadGameOver();
-            //sceneLoader = new SceneLoader();
-            //sceneLoader.LoadGameOver();
+
         }
     }
 
@@ -51,7 +58,7 @@ public class MotherCell : MonoBehaviour
     {
         
 
-        if (Time.time > bonusTime)
+        if (elapsedTime > bonusTime)
         {
             
             health += 25 * multiplier;
@@ -74,13 +81,13 @@ public class MotherCell : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Bacteriophage")
+        if (collision.gameObject.tag == "Enemy")
         {
 
 
-            if (Time.time > hurtTime)
+            if (elapsedTime > hurtTime)
             {
-                hurtTime = Time.time + hurtRate;
+                hurtTime = elapsedTime + hurtRate;
                 health -= 1;
             }
 

@@ -9,21 +9,24 @@ public class EnemySpawner : MonoBehaviour
     public float spawnRate = 5f;
     float nextSpawn = 0.0f;
     public float nextSpawnerActivation = 0.0f;
+    float timeElapsed;
 
     // Start is called before the first frame update
     void Start()
     {
+        
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > nextSpawnerActivation)
+        timeElapsed = Time.timeSinceLevelLoad;
+        if (timeElapsed > nextSpawnerActivation)
         {
-            if (Time.time > nextSpawn)
+            if (timeElapsed > nextSpawn)
             {
-                nextSpawn = Time.time + spawnRate;
+                nextSpawn = timeElapsed + spawnRate;
                 spawnPoint = new Vector2(transform.position.x, transform.position.y);
                 Instantiate(enemies[Random.Range(0,enemies.Count)], spawnPoint, Quaternion.identity);
                 if (spawnRate > 1)
