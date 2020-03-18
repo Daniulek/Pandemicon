@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,7 +19,7 @@ public class Bullet : MonoBehaviour
 
         rigidbody = GetComponent<Rigidbody2D>();
         Destroy(this.gameObject, autodestruction);
-       
+        
     }
 
     private void Start()
@@ -31,7 +32,10 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         ChangeDirection();
+        GetComponent<DamageDealer>().damage = FindObjectOfType<GameSession>().GetSP();
+
     }
+
 
     private void ChangeDirection()
     {

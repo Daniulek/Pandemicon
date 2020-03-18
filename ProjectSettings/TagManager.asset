@@ -9,6 +9,8 @@ TagManager:
   - MotherCell
   - Borders
   - Bacteriophage
+  - Corona
+  - Bullet
   layers:
   - Default
   - TransparentFX

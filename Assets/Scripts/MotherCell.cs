@@ -51,6 +51,11 @@ public class MotherCell : MonoBehaviour
                 Destroy(enemy);
             }
 
+            foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Corona"))
+            {
+                Destroy(enemy);
+            }
+
             FindObjectOfType<SceneLoader>().LoadGameOver();
 
         }
@@ -72,15 +77,7 @@ public class MotherCell : MonoBehaviour
 
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if(collision.gameObject.tag == "Bacteriophage")
-    //    {
-    //        health -= 1;
-
-    //    }
-    //}
-
+ 
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Enemy")

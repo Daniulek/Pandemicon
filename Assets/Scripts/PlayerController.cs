@@ -6,7 +6,7 @@ using UnityStandardAssets.CrossPlatformInput;
 public class PlayerController : MonoBehaviour
 {
     private Vector2 moveDir;
-    public float moveSpeed = 15;
+    public float moveSpeed = 10;
     private Rigidbody2D rigidBody2D;
 
 
@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
         rigidBody2D.gravityScale = 1;
         animator = GetComponent<Animator>();
         
+
     }
 
   
@@ -25,16 +26,19 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GetComponent<PlayerController>().moveSpeed = FindObjectOfType<GameSession>().GetMS();
         animator.SetFloat("Horizontal", CrossPlatformInputManager.GetAxisRaw("Horizontal"));
 
-            moveDir = new Vector2(CrossPlatformInputManager.GetAxisRaw("Horizontal"), 0).normalized;
-           
+        moveDir = new Vector2(CrossPlatformInputManager.GetAxisRaw("Horizontal"), 0).normalized;
+
+
     }
 
     void FixedUpdate()
 
     {
-
+            
+           
             Vector2 globalmovedir = (transform.TransformDirection(moveDir));
             rigidBody2D.position += globalmovedir * moveSpeed * Time.fixedDeltaTime;
             

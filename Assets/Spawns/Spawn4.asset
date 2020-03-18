@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 188391616318677255, guid: 4ff3b6482f0f5ef4792413d5922a91df,
     type: 3}
-  pathPrefab: {fileID: 278272403384279953, guid: bc88ffcf57b14f344b64e0320309ff68,
+  pathPrefab: {fileID: 306046670953102355, guid: bc88ffcf57b14f344b64e0320309ff68,
     type: 3}
+  enemyBulletPrefab: {fileID: 0}
   motherCellTrans: {fileID: 1971672161684045505, guid: dbf8bb17bed84b3468075995becf0d6d,
     type: 3}
   timeBetweenSpawns: 0.5

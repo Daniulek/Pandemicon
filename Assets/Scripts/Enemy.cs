@@ -21,6 +21,8 @@ public class Enemy : MonoBehaviour
     public bool canShoot = false;
     private float angle;
     public Rigidbody2D rigidbody2D;
+    private int countCorona = 0;
+    
 
 
 
@@ -89,7 +91,17 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
+        
+        if (gameObject.tag == "Corona")
+        {
+            FindObjectOfType<GameSession>().CountCorona();
+        }
+
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
         Destroy(gameObject);
+
+        
     }
+
+
 }

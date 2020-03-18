@@ -9,7 +9,7 @@ public class Shooting : MonoBehaviour
     public Transform firePoint;
     public GameObject bulletPrefab;
 
-    public float bulletForce = 20f;
+    public float bulletSpeed = 20f;
 
 
     // Update is called once per frame
@@ -26,6 +26,6 @@ public class Shooting : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.transform.position, firePoint.transform.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(firePoint.transform.up * bulletForce, ForceMode2D.Impulse);
+        rb.AddForce(firePoint.transform.up * bulletSpeed, ForceMode2D.Impulse);
     }
 }

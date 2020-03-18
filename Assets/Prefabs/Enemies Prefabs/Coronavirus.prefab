@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4904486948505251589}
   m_Layer: 8
   m_Name: Coronavirus
-  m_TagString: Enemy
+  m_TagString: Corona
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -8,7 +8,7 @@ public class EnemyPathing : MonoBehaviour
     List<Transform> waypoints;
     [SerializeField] float moveSpeed = 1f;
     Rigidbody2D rigidbody2D;
-    int waypointIndex = 0;
+    public int waypointIndex = 0;
 
 
 
