@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 188391616318677258}
   - component: {fileID: 5838786878898645116}
   - component: {fileID: 5849761381332101665}
+  - component: {fileID: 1482490072}
   m_Layer: 8
   m_Name: Pasturella 2
   m_TagString: Enemy
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 188391616318677255}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.79, y: 19.79, z: 1}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2c52ebabdaa95b5469542aca75a51983, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb0bf2348ec995845883859c104fc6d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +104,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.25, y: 1.25}
+    oldSize: {x: 1.48, y: 1}
     newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -147,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnConfig: {fileID: 11400000, guid: 6af058880c073eb4cba37700e010db46, type: 2}
   moveSpeed: 3
+  waypointIndex: 0
 --- !u!114 &5838786878898645116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,12 +161,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31491acfca3d5d14588f5122a68e4711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 150
   health: 1
   fireRate: 0
   projectileSpeed: 5
+  moveSpeed: 0.1
   spawnConfig: {fileID: 0}
   targetPosition: {fileID: 0}
-  moveSpeed: 0.1
   canShoot: 0
   rigidbody2D: {fileID: 0}
 --- !u!114 &5849761381332101665
@@ -180,3 +183,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+--- !u!95 &1482490072
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188391616318677255}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9b0ab9ce8858c134f8f0a37759c919d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
