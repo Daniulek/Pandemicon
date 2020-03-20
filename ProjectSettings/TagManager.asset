@@ -11,6 +11,9 @@ TagManager:
   - Bacteriophage
   - Corona
   - Bullet
+  - AchievHP
+  - AchievMS
+  - AchievSP
   layers:
   - Default
   - TransparentFX

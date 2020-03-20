@@ -2,24 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ScoreDisplay : MonoBehaviour
 {
 
-    Text scoreText;
-    GameSession gameSession;
+    private TextMeshProUGUI scoreTextMesh;
+    private GameSession gameSession;
 
-    // Start is called before the first frame update
+
+
     void Start()
     {
-        scoreText = GetComponent<Text>();
+
+        scoreTextMesh = GetComponent<TextMeshProUGUI>();
         gameSession = FindObjectOfType<GameSession>();
+ 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        scoreText.text = gameSession.GetScore().ToString();
-                
-    }
+
+    void Update(){scoreTextMesh.text = "SCORE: " + gameSession.GetScore().ToString("000000");}
+
 }

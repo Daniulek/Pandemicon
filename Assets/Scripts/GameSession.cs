@@ -13,6 +13,9 @@ public class GameSession : MonoBehaviour
     int playerMoveSpeed = 10;
     int multiplierSP = 1;
     int multiplierMS = 1;
+    Animator achievAnimMS;
+    Animator achievAnimSP;
+
 
     private void Awake()
     {
@@ -59,17 +62,21 @@ public class GameSession : MonoBehaviour
 
     public void AddShotPower(int coronasValue) // SHOT POWER ACHIEVEMENT
     {
-        
-
         if (coronasValue >= bonusSP)
         {
+            achievAnimSP = GameObject.FindGameObjectWithTag("AchievSP").GetComponent<Animator>();
             shotPower += 1 * multiplierSP;
+            achievAnimSP.SetTrigger("start");
             multiplierSP += 1;
             //Debug.Log(" Coronas: " + coronas + " BonusSP: " + bonusSP + " Multiplier: " + multiplierSP + " ShotPower: " + shotPower);
             bonusSP = bonusSP * 10;
-            
+     
         }
 
+    }
+    public int GetMultiplierSP()
+    {
+        return multiplierSP;
     }
 
     public int GetSP()
@@ -81,13 +88,19 @@ public class GameSession : MonoBehaviour
     {
         if (scoreValue >= bonusMS)
         {
-
+            achievAnimMS = GameObject.FindGameObjectWithTag("AchievMS").GetComponent<Animator>();
             playerMoveSpeed += 1 * multiplierMS;
-            Debug.Log(" SCORE: " + score + " BonusMS: " + bonusMS + " MultiplierMS: " + multiplierMS + " PLAYERMOVESPEED: " + playerMoveSpeed);
+            achievAnimMS.SetTrigger("start");
+            //Debug.Log(" SCORE: " + score + " BonusMS: " + bonusMS + " MultiplierMS: " + multiplierMS + " PLAYERMOVESPEED: " + playerMoveSpeed);
             multiplierMS += 1;
             bonusMS = bonusMS * 10;
 
         }
+    }
+
+    public int GetMultiplierMS()
+    {
+        return multiplierMS;
     }
 
     public int GetMS()

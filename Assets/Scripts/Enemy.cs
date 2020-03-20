@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] int scoreValue = 150;
     [SerializeField] float health = 100;
     [SerializeField] float fireRate;
-    [SerializeField] float projectileSpeed = 5;
     public float moveSpeed = 0.1f;
 
     [SerializeField] SpawnConfig spawnConfig;
