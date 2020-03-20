@@ -21,8 +21,10 @@ public class Enemy : MonoBehaviour
     private float angle;
     public Rigidbody2D rigidbody2D;
     private int countCorona = 0;
-    
 
+    
+    [SerializeField] AudioClip deathSound;
+    [SerializeField] [Range(0, 1)] float deathSoundVolume = 0.75f;
 
 
     private void Awake()
@@ -97,6 +99,7 @@ public class Enemy : MonoBehaviour
         }
 
         FindObjectOfType<GameSession>().AddToScore(scoreValue);
+        AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
         Destroy(gameObject);
 
         

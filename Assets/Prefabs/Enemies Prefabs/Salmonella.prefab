@@ -148,9 +148,10 @@ MonoBehaviour:
   scoreValue: 3
   health: 2
   fireRate: 0
-  projectileSpeed: 5
   moveSpeed: 3
   spawnConfig: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 0912079678262884a8461146bcf05df5, type: 3}
+  deathSoundVolume: 0.75
   targetPosition: {fileID: 0}
   canShoot: 0
   rigidbody2D: {fileID: 0}

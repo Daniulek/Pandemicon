@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 10;
     private Rigidbody2D rigidBody2D;
 
+    //[SerializeField] AudioClip runSound;
+    //[SerializeField] [Range(0, 1)] float runSoundVolume = 0.75f; 
+
 
     public Animator animator;
 
@@ -23,26 +26,18 @@ public class PlayerController : MonoBehaviour
 
   
 
-    // Update is called once per frame
     void Update()
     {
         GetComponent<PlayerController>().moveSpeed = FindObjectOfType<GameSession>().GetMS();
         animator.SetFloat("Horizontal", CrossPlatformInputManager.GetAxisRaw("Horizontal"));
-
         moveDir = new Vector2(CrossPlatformInputManager.GetAxisRaw("Horizontal"), 0).normalized;
-
-
     }
 
     void FixedUpdate()
-
     {
-            
-           
-            Vector2 globalmovedir = (transform.TransformDirection(moveDir));
-            rigidBody2D.position += globalmovedir * moveSpeed * Time.fixedDeltaTime;
-            
-
+        Vector2 globalmovedir = (transform.TransformDirection(moveDir));
+        rigidBody2D.position += globalmovedir * moveSpeed * Time.fixedDeltaTime;
+        //AudioSource.PlayClipAtPoint(runSound, Camera.main.transform.position, runSoundVolume);
     }
 
 

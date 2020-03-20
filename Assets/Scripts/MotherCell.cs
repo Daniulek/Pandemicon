@@ -14,7 +14,6 @@ public class MotherCell : MonoBehaviour
     private GameObject animPrefab;
 
 
-
     public int health=150;
     
 
@@ -25,6 +24,7 @@ public class MotherCell : MonoBehaviour
         achievAnimHP = GameObject.FindGameObjectWithTag("AchievHP").GetComponent<Animator>();
 
     }
+
 
     // Update is called once per frame
     void Update()
@@ -53,6 +53,8 @@ public class MotherCell : MonoBehaviour
     {
         if (health <= 0)
         {
+
+            
             foreach (GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
             {
                 Destroy(enemy);
@@ -77,22 +79,14 @@ public class MotherCell : MonoBehaviour
             
             health += 25 * multiplier;
             bonusTime += 60f;
-            Debug.Log(25 * multiplier + " : " + health);
             achievAnimHP.SetTrigger("start");
             multiplier += 1;
 
-
-            // ShowAchiveHPAnim(multiplier);
         }
 
     }
 
-    //private void ShowAchiveHPAnim(int multiplierValue) // TO DO FIXING
-    //{
-    //    animPrefab = GameObject.FindGameObjectWithTag("AchievHP");
-    //    var animHP = Instantiate(animPrefab, animPrefab.transform.position, Quaternion.identity);
-    //   // animHP.GetComponent<TextMesh>().text = (multiplierValue * 25).ToString();
-    //}
+
 
 
     private void OnCollisionStay2D(Collision2D collision)
