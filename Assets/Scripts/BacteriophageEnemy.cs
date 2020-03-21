@@ -16,7 +16,7 @@ public class BacteriophageEnemy : Enemy
     void Update()
     {
         Vector3 direction = targetPosition.position - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90;
         rigidbody2D.rotation = angle;
         direction.Normalize();
 
