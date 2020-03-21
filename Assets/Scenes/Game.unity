@@ -1200,7 +1200,7 @@ PrefabInstance:
     - target: {fileID: 6684077807292367804, guid: c7d0e44232d556549a18fd07a35fa76a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 228
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 6684077807292367804, guid: c7d0e44232d556549a18fd07a35fa76a,
         type: 3}
@@ -1481,7 +1481,7 @@ PrefabInstance:
     - target: {fileID: 1303543498391471603, guid: 6308fc8f7396e1a49882d99b984397eb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 228
+      value: 340
       objectReference: {fileID: 0}
     - target: {fileID: 1303543498391471603, guid: 6308fc8f7396e1a49882d99b984397eb,
         type: 3}
@@ -2448,7 +2448,7 @@ PrefabInstance:
     - target: {fileID: 3831487139820485859, guid: 9705a4deb85fa2741abcde94f95c003d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 228
+      value: 162
       objectReference: {fileID: 0}
     - target: {fileID: 3831487139820485859, guid: 9705a4deb85fa2741abcde94f95c003d,
         type: 3}
@@ -6782,7 +6782,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2086727520, guid: dbf8bb17bed84b3468075995becf0d6d, type: 3}
       propertyPath: health
-      value: 150
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 2086727520, guid: dbf8bb17bed84b3468075995becf0d6d, type: 3}
       propertyPath: deathSound

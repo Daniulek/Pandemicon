@@ -9,8 +9,8 @@ public class GameSession : MonoBehaviour
     int coronas = 0;
     int bonusSP = 1;
     int bonusMS = 1000;
-    int shotPower = 1;
-    int playerMoveSpeed = 10;
+    int shotPower = 5;
+    int playerMoveSpeed = 7;
     int multiplierSP = 1;
     int multiplierMS = 1;
     Animator achievAnimMS;
@@ -89,10 +89,9 @@ public class GameSession : MonoBehaviour
         if (scoreValue >= bonusMS)
         {
             achievAnimMS = GameObject.FindGameObjectWithTag("AchievMS").GetComponent<Animator>();
-            playerMoveSpeed += 1 * multiplierMS;
+            playerMoveSpeed += multiplierMS;
             achievAnimMS.SetTrigger("start");
             //Debug.Log(" SCORE: " + score + " BonusMS: " + bonusMS + " MultiplierMS: " + multiplierMS + " PLAYERMOVESPEED: " + playerMoveSpeed);
-            multiplierMS += 1;
             bonusMS = bonusMS * 10;
 
         }

@@ -135,8 +135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48bc8553d2b8b0841a635367322fec6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreValue: 20
-  health: 3
+  scoreValue: 300
+  health: 15
   fireRate: 0
   moveSpeed: 2
   spawnConfig: {fileID: 0}
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c7361cc76005744b7db25a1c0663a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 10
 --- !u!95 &881810497741293126
 Animator:
   serializedVersion: 3
