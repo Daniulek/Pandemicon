@@ -9,7 +9,7 @@ public class GameSession : MonoBehaviour
     int coronas = 0;
     int bonusSP = 1;
     int bonusMS = 1000;
-    int shotPower = 5;
+    int shotPower = 1;
     int playerMoveSpeed = 10;
     int multiplierSP = 1;
     int multiplierMS = 1;

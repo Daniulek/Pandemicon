@@ -11,7 +11,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] float fireRate;
     public float moveSpeed = 0.1f;
 
+
     [SerializeField] SpawnConfig spawnConfig;
+    [SerializeField] Animator animator;
 
     [Header("Shooting")]
     GameObject projectile;
@@ -30,6 +32,7 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
 
@@ -83,6 +86,8 @@ public class Enemy : MonoBehaviour
     private void ProcessHit(DamageDealer damageDealer)
     {
         health -= damageDealer.GetDamage();
+
+        animator.SetTrigger("Hit");
 
         if (health <= 0)
         {

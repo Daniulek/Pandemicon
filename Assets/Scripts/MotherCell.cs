@@ -13,8 +13,7 @@ public class MotherCell : MonoBehaviour
     private Animator achievAnimHP;
     private GameObject animPrefab;
 
-    [SerializeField] AudioClip bonusHPSound;
-    [SerializeField] [Range(0, 1)] float bonusHPSoundVolume = 0.75f;
+
 
 
     public int health=150;
@@ -79,13 +78,12 @@ public class MotherCell : MonoBehaviour
         if (elapsedTime > bonusTime)
         {
             
-            health += 25 * multiplier;
+            health += 50 * multiplier;
             bonusTime += 60f;
             achievAnimHP.SetTrigger("start");
             multiplier += 1;
 
-            AudioSource.PlayClipAtPoint(bonusHPSound, Camera.main.transform.position, bonusHPSoundVolume);
-
+            
         }
 
     }

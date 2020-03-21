@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7301245299762453897}
   - component: {fileID: 7301245299762453900}
-  - component: {fileID: 7301245299762453901}
   - component: {fileID: 7301245299762453898}
+  - component: {fileID: 2372178374543317166}
   - component: {fileID: -6157548666827826608}
   - component: {fileID: -3973045748970356472}
   - component: {fileID: 1378340966407861067}
@@ -87,32 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7301245299762453901
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7301245299762453894}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.54, y: 3.4}
-    newSize: {x: 0.5, y: 0.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.25, y: 1.25}
-  m_EdgeRadius: 0
 --- !u!50 &7301245299762453898
 Rigidbody2D:
   serializedVersion: 4
@@ -134,6 +108,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &2372178374543317166
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7301245299762453894}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.05014354, y: -0.14338154}
+  serializedVersion: 2
+  m_Radius: 0.9844975
 --- !u!114 &-6157548666827826608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,10 +137,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 10
-  health: 5
+  health: 1
   fireRate: 1
   moveSpeed: 1
   spawnConfig: {fileID: 11400000, guid: 7c0db91e04678f745a1d5ce16815effa, type: 2}
+  animator: {fileID: 0}
   targetPosition: {fileID: 0}
   canShoot: 1
   rigidbody2D: {fileID: 0}

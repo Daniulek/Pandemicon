@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7301245299762453897}
   - component: {fileID: 7301245299762453900}
-  - component: {fileID: 7301245299762453901}
   - component: {fileID: 7301245299762453898}
   - component: {fileID: 3494321257565676344}
   - component: {fileID: -1617166481523252081}
   - component: {fileID: 367884872279681673}
+  - component: {fileID: 702966629279692149}
   m_Layer: 8
   m_Name: Salmonella
   m_TagString: Enemy
@@ -86,32 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7301245299762453901
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7301245299762453894}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.48, y: 1}
-    newSize: {x: 0.5, y: 0.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.25, y: 1.25}
-  m_EdgeRadius: 0
 --- !u!50 &7301245299762453898
 Rigidbody2D:
   serializedVersion: 4
@@ -146,10 +120,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreValue: 3
-  health: 2
+  health: 1
   fireRate: 0
   moveSpeed: 3
   spawnConfig: {fileID: 0}
+  animator: {fileID: 0}
   targetPosition: {fileID: 0}
   canShoot: 0
   rigidbody2D: {fileID: 0}
@@ -187,3 +162,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &702966629279692149
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7301245299762453894}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0077120652, y: -0.010283469}
+  m_Size: {x: 1.413156, y: 0.88354266}
+  m_Direction: 1
