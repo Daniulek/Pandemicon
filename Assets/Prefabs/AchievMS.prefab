@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 582259673872408187}
   - component: {fileID: 1072374853665706061}
   - component: {fileID: 5054924618211179857}
+  - component: {fileID: 7478817137229344593}
   m_Layer: 5
-  m_Name: Achiev MS
+  m_Name: AchievMS
   m_TagString: AchievMS
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -178,3 +179,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7478817137229344593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5499138432581768945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4c9f5c200adbe645aa141014bc31432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
