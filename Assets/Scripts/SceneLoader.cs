@@ -19,6 +19,18 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
+    public void LoadTutorial()
+    {
+
+        SceneManager.LoadScene("Tutorial");
+    }
+
+    public void LoadCredits()
+    {
+
+        SceneManager.LoadScene("Credits");
+    }
+
     public void LoadGameOver()
     {
 

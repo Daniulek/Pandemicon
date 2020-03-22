@@ -17,7 +17,7 @@ public class AchievHP : MonoBehaviour
     void Update()
     {
         
-        textMesh.text = "LONG SURVIVOR! +" + ((motherCell.GetComponent<MotherCell>().multiplier - 1) * 25).ToString() + "HP";
+        textMesh.text = "LONG SURVIVOR! +" + motherCell.GetComponent<MotherCell>().pointsAdded.ToString() + "HP";
 
     }
 }

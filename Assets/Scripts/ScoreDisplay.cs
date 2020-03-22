@@ -21,6 +21,6 @@ public class ScoreDisplay : MonoBehaviour
     }
 
 
-    void Update(){scoreTextMesh.text = "SCORE: " + gameSession.GetScore().ToString("000000");}
+    void Update(){scoreTextMesh.text = "SCORE: " + gameSession.GetScore().ToString("00000000");}
 
 }

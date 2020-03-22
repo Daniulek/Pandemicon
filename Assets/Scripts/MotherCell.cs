@@ -8,7 +8,7 @@ public class MotherCell : MonoBehaviour
     float hurtRate = 2f;
     float bonusTime = 60f;
     float elapsedTime;
-    public int multiplier = 1;
+    public int pointsAdded = 50;
     private Animator animator;
     private Animator achievAnimHP;
     private GameObject animPrefab;
@@ -78,12 +78,10 @@ public class MotherCell : MonoBehaviour
         if (elapsedTime > bonusTime)
         {
             
-            health += 50 * multiplier;
+            health += pointsAdded;
             bonusTime += 60f;
             achievAnimHP.SetTrigger("start");
-            multiplier += 1;
-
-            
+     
         }
 
     }

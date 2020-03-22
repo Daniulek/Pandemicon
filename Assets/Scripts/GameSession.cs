@@ -2,13 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameSession : MonoBehaviour
 {
     int score = 0;
     int coronas = 0;
     int bonusSP = 1;
-    int bonusMS = 1000;
+    int bonusMS = 500;
     int shotPower = 5;
     int playerMoveSpeed = 7;
     int multiplierSP = 1;
@@ -20,6 +21,7 @@ public class GameSession : MonoBehaviour
     private void Awake()
     {
         SetUpSingleton();
+       
         
     }
 
@@ -48,6 +50,7 @@ public class GameSession : MonoBehaviour
         AddMoveSpeed(score);
     }
 
+
     public int GetCoronas()
     {
         return coronas;
@@ -69,7 +72,7 @@ public class GameSession : MonoBehaviour
             achievAnimSP.SetTrigger("start");
             multiplierSP += 1;
             //Debug.Log(" Coronas: " + coronas + " BonusSP: " + bonusSP + " Multiplier: " + multiplierSP + " ShotPower: " + shotPower);
-            bonusSP = bonusSP * 10;
+            bonusSP = bonusSP * 5;
      
         }
 

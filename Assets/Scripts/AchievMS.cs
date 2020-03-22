@@ -17,7 +17,7 @@ public class AchievMS : MonoBehaviour
     void Update()
     {
 
-        textMesh.text = "RUN HERO RUN!!! \n +" + ((gameSession.GetMultiplierMS() * 1) - 1).ToString() + " MOVE SPEED";
+        textMesh.text = "RUN HERO RUN!!! \n +" + (gameSession.GetMultiplierMS() * 1).ToString() + " MOVE SPEED";
 
     }
 }
