@@ -11,7 +11,7 @@ public class GameSession : MonoBehaviour
     int bonusSP = 1;
     int bonusMS = 500;
     int shotPower = 5;
-    int playerMoveSpeed = 7;
+    int playerMoveSpeed = 8;
     int multiplierSP = 1;
     int multiplierMS = 1;
     Animator achievAnimMS;

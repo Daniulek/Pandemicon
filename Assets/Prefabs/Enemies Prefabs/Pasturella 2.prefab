@@ -162,6 +162,7 @@ MonoBehaviour:
   rigidbody2D: {fileID: 0}
   deathSound: {fileID: 8300000, guid: ad75484576f386f4a8295e627937b521, type: 3}
   deathSoundVolume: 0.564
+  deathVFX: {fileID: 0}
 --- !u!114 &5849761381332101665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c7361cc76005744b7db25a1c0663a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 7
 --- !u!95 &1482490072
 Animator:
   serializedVersion: 3

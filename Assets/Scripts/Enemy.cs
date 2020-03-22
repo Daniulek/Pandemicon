@@ -28,6 +28,9 @@ public class Enemy : MonoBehaviour
     [SerializeField] AudioClip deathSound;
     [SerializeField] [Range(0, 1)] float deathSoundVolume = 0.75f;
 
+    [SerializeField] GameObject deathVFX; 
+
+
 
     private void Awake()
     {
@@ -107,6 +110,9 @@ public class Enemy : MonoBehaviour
         AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
         Destroy(gameObject);
 
+        deathVFX = GameObject.FindGameObjectWithTag("Explosion");
+        GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
+        Destroy(explosion, 0.3f);
         
     }
 
