@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e0957fa46a5f84595031ff8385e3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
-  health: 150
+  pointsAdded: 50
+  health: 250
 --- !u!114 &2086727521
 MonoBehaviour:
   m_ObjectHideFlags: 0
